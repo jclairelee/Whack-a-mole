@@ -3,6 +3,7 @@ const cursor = document.querySelector(" .hammer");
 const holes = [...document.querySelectorAll(" .hole")];
 const scoreEl = document.querySelector(" .score span");
 let score = 0;
+const hittingSound = new Audio("./sound/hit.mp3");
 
 function run() {
   const randomNum = Math.floor(Math.random() * holes.length);
@@ -14,9 +15,9 @@ function run() {
 
   img.addEventListener("click", () => {
     score += 10;
+    hittingSound.play();
     scoreEl.textContent = score;
     img.src = "./image/whack-a-mole.png";
-    s;
     clearTimeout(timer);
     setTimeout(() => {
       hole.removeChild(img);
@@ -27,11 +28,10 @@ function run() {
   timer = setTimeout(() => {
     hole.removeChild(img);
     run();
-  }, 1500);
+  }, 1300);
 }
 run();
 window.addEventListener("mouseover", (e) => {
-  console.log(e);
   cursor.style.top = e.pageY + "px";
   cursor.style.left = e.pageX + "px";
 });
