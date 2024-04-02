@@ -9,14 +9,49 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: rgb(244, 198, 33);
 }
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 .title {
   font-size: 2rem;
   margin-top: 3rem;
   text-align: center;
 }
-.score {
+.desc {
   font-size: 1.5rem;
+  padding: 8rem 5rem 0rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 2.25rem;
   text-align: center;
+}
+.startBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 14rem;
+  height: 5rem;
+  color: white;
+  text-align: center;
+  margin: auto auto;
+  background-color: rgb(120 95 81);
+  cursor: pointer;
+}
+.numbers {
+  display: flex;
+  justify-content: space-evenly;
+}
+.score,
+.timer {
+  font-size: 1.5rem;
   margin-top: 0.5rem;
   margin-bottom: 4rem;
   color: rgb(7, 127, 226);

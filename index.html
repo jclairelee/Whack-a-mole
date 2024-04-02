@@ -9,19 +9,31 @@
   </head>
   <body>
     <h1 class="title">WHACK-A-MOLE!</h1>
-    <h1 class="score">Your Score: <span>0</span></h1>
-    <div class="container">
-      <div class="hole"></div>
-      <div class="hole"></div>
-      <div class="hole"></div>
-      <div class="hole"></div>
-      <div class="hole"></div>
-      <div class="hole"></div>
-      <div class="hole"></div>
-      <div class="hole"></div>
-      <div class="hole"></div>
+    <p class="desc">
+      This is a rapid-fire game where you whack moles as they appear. Each hit
+      earns 5 points, but watch out for bombs to avoid penalties.<br /><br />Are
+      you Ready to test your reaction time and hand-eye coordination? Let's
+      start the 3-minute countdown now!
+    </p>
+    <button id="startButton" class="startBtn">START</button>
+    <div id="game-content" style="display: none">
+      <div class="numbers">
+        <h1 class="score">Your Score: <span>0</span></h1>
+        <h1 class="timer">Timer: <span>180</span> sec</h1>
+      </div>
+      <div class="container">
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+        <div class="hole"></div>
+      </div>
+      <div class="hammer"></div>
     </div>
-    <div class="hammer"></div>
     <script src="./main.js"></script>
   </body>
 </html>
